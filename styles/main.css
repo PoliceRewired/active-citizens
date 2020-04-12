@@ -57,6 +57,7 @@
 .volunteering-cell.blue { border-color: #2121AD; }
 .volunteering-cell.purple { border-color: #6621AD; }
 .volunteering-cell.yellow { border-color: #AA8811; }
+.volunteering-cell.black { border-color: #212121; }
 
 div.first {
 	text-align: center;
@@ -81,6 +82,16 @@ div.first,div.second {
 .button.blue { background-color: #2121AD; border-color: #2121AD; }
 .button.purple { background-color: #6621AD; border-color: #6621AD; }
 .button.yellow { background-color: #AA8811; border-color: #AA8811; }
+.button.black { background-color: #212121; border-color: #212121; }
+
+a.button.govuk {  background-color: #0B0B0B; border-color: #0B0B0B; padding-left: 0px; padding-right: 0px; position: relative; }
+.button.govuk span {
+	padding: 0; margin: 0; left: 0; right: 0; width: auto; position: absolute;
+	padding-left: 30px; padding-right: 30px; padding-top: 13px; line-height: 10px;
+	border: none; border-bottom: solid 3px #FFE114; padding-bottom: 3px;
+
+}
+.button.brighter { filter: brightness(120%); }
 
 .volunteering-cell.green div.first {
 	background-color:  #21AD21;
@@ -137,4 +148,12 @@ div.first,div.second {
 .volunteering-cell.yellow div.second {
 	background-color:  white;
 	color: #AA8811;
+}
+.volunteering-cell.black div.first {
+	background-color:  #212121;
+	color: white;
+}
+.volunteering-cell.black div.second {
+	background-color:  white;
+	color: #212121;
 }
