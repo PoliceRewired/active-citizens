@@ -85,7 +85,9 @@ div.first,div.second {
 .button.purple { background-color: #6621AD; border-color: #6621AD; }
 .button.yellow { background-color: #AA8811; border-color: #AA8811; }
 .button.black { background-color: #212121; border-color: #212121; }
+.button.govuk { background-color: #424242; border-color: #424242; }
 
+/*
 a.button.govuk {  background-color: #0B0B0B; border-color: #0B0B0B; padding-left: 0px; padding-right: 0px; position: relative; }
 .button.govuk span {
 	padding: 0; margin: 0; left: 0; right: 0; width: auto; position: absolute;
@@ -93,6 +95,7 @@ a.button.govuk {  background-color: #0B0B0B; border-color: #0B0B0B; padding-left
 	border: none; border-bottom: solid 3px #FFE114; padding-bottom: 3px;
 
 }
+*/
 .button.brighter { filter: brightness(120%); }
 
 .volunteering-cell.green div.first {
