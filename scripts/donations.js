@@ -45,7 +45,7 @@ var donation_wheel = {
         donation_wheel.wheel.stopAnimation(false);
         donation_wheel.wheel.rotationAngle = 0;
 
-        $('#selected_org_title').html(indicatedSegment.recipient.Project);
+        $('#selected_org_title').html(indicatedSegment.recipient.Project + ", " + indicatedSegment.recipient.Organisation);
         $('#selected_org_text').html(indicatedSegment.recipient.About);
 
         $('#selected_org_link_org').hide();
