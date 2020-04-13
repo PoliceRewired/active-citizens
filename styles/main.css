@@ -52,6 +52,7 @@
 
 .volunteering-cell.green { border-color: #21AD21; }
 .volunteering-cell.red { border-color: #AD2121; }
+.volunteering-cell.darkRed { border-color: #841212; }
 .volunteering-cell.cyan { border-color: #21ADAD; }
 .volunteering-cell.orange { border-color: #AD6621; }
 .volunteering-cell.blue { border-color: #2121AD; }
@@ -76,6 +77,7 @@ div.first,div.second {
 
 .button { width: 100%; text-align: left; }
 .button.red { background-color: #AD2121; border-color: #AD2121; }
+.button.darkRed { background-color: #841212; border-color: #841212; }
 .button.green { background-color: #21AD21; border-color: #21AD21; }
 .button.cyan { background-color: #21ADAD; border-color: #21ADAD; }
 .button.orange { background-color: #AD6621; border-color: #AD6621; }
@@ -156,4 +158,12 @@ a.button.govuk {  background-color: #0B0B0B; border-color: #0B0B0B; padding-left
 .volunteering-cell.black div.second {
 	background-color:  white;
 	color: #212121;
+}
+.volunteering-cell.darkRed div.first {
+	background-color: #841212;
+	color: white;
+}
+.volunteering-cell.darkRed div.second {
+	background-color:  white;
+	color: #841212;
 }

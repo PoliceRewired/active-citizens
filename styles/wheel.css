@@ -1,0 +1,40 @@
+#the_wheel {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    background-image: url('../images/wheel/curtains.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#the_wheel canvas {
+    margin: 0;
+}
+
+#wheel_central {
+    width: 100%;
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+}
+
+#wheel_central p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a.spinButton {
+    background-color: blueviolet;
+    border: solid 1px black;
+    font-size: 14pt;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+a.spinButton:hover {
+    background-color: blueviolet;
+    filter: brightness(120%);
+    border: solid 1px black;
+}
