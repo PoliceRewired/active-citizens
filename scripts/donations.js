@@ -43,6 +43,7 @@ var donation_wheel = {
         // reset the wheel - a bit?!
         donation_wheel.spinning = false;
         donation_wheel.wheel.stopAnimation(false);
+        donation_wheel.wheel.rotationAngle = 0;
 
         $('#selected_org_title').html(indicatedSegment.recipient.Project);
         $('#selected_org_text').html(indicatedSegment.recipient.About);
@@ -58,7 +59,7 @@ var donation_wheel = {
         var project_link = indicatedSegment.recipient['Project link'];
 
         if (org_link) {
-            $('#selected_org_link_org').html(indicatedSegment.recipient.Organisation);
+            $('#selected_org_link_org').html(indicatedSegment.recipient.Organisation + "...");
             $('#selected_org_link_org').attr("href", org_link);
             $('#selected_org_link_org').show();
         } else {
@@ -86,16 +87,20 @@ var donation_wheel = {
 
     initWheel: function() {
         var colours = [ '#eae56f', '#89f26e', '#7de6ef', '#e7706f' ];
+        //var colours = [ '#DAA520', '#D4AF37', '#EEE8AA', '#CFB53B', '#F0E68C', '#FFA500', '#C5B358', '#E6BE8A' ]; // gold colours
 
         var segments = [];
         var colourIndex = 0;
-        for (var iter = 0; iter < 2; iter++) {
+        for (var iter = 0; iter < 1; iter++) {
             for (var r = 0; r < donation_wheel.recipients.length; r++) {
                 var recipient = donation_wheel.recipients[r];
 
                 // pick and advance colour
-                var nextColour = colours[colourIndex];
-                colourIndex = colourIndex + 1; if (colourIndex == colours.length) { colourIndex = 0; }
+                // var nextColour = colours[colourIndex];
+                // colourIndex = colourIndex + 1; if (colourIndex == colours.length) { colourIndex = 0; }
+                var value = (0.6 + (Math.random() * 0.25)) * 0xFF | 0;
+                var grayscale = (value << 16) | (value << 8) | value;
+                var nextColour = '#' + grayscale.toString(16);
                 if (recipient['Segment override']) { nextColour = recipient['Segment override']; }
 
                 // build segment
@@ -111,7 +116,7 @@ var donation_wheel = {
         donation_wheel.wheel = new Winwheel({
             'numSegments'   : segments.length, // Specify number of segments.
             'outerRadius'   : 212,  // Set radius to so wheel fits the background.
-            'innerRadius'   : 20,  // Set inner radius to make wheel hollow.
+            //'innerRadius'   : 40,  // Set inner radius to make wheel hollow.
             'textFontSize'  : 14,   // Set font size accordingly.
             'textMargin'    : 0,    // Take out default margin.
             'segments'      : segments,
@@ -126,7 +131,7 @@ var donation_wheel = {
             },
             'pins' :
             {
-                'number' : segments.length * 3
+                'number' : segments.length * 2
             }
         });
     },
